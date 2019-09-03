@@ -1,0 +1,28 @@
+@Book{soriano,
+author = {Soriano, Maricor N.},
+title = {Enhancing color images},
+year = {2019}
+}
+
+@article{constretch,
+author = {Wang, S and Zhang, Y and Deng, P and Zhou, F},
+title = {Fast automatic white balancing method by color histogram stretching},
+journal = {4th International Congress on Signal and Image Processing},
+pages = {979--983},
+doi = {10.1109/CISP.2011.6100338},
+year = {2011}
+}
+
+@INPROCEEDINGS{awbaet,
+author={Tai, Shen Chuan and Chang, Yi Ying and Yeh, Chih Pei},
+booktitle={2012 8th International Conference on Information Science and Digital Content Technology (ICIDT2012)},
+title={Automatic White Balance algorithm through the average equalization and threshold},
+year={2012},
+volume={3},
+number={},
+pages={571--576},
+keywords={cameras;image colour analysis;image segmentation;average equalization;digital cameras;color cast removal;uncanonical iIIuminants;image capturing;image color contrast;image color variations;image color temperature predictions;automatic white balance algorithm through the average equalization and threshold;AWBAAET;gray world method;GW;color histogram stretching algorithm;CHS;image color range;RGB channels;Engines;white balance;color correlation;colour cast correlation},
+doi={},
+url={http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6269338&isnumber=6269316},
+ISSN={},
+month={June},}
