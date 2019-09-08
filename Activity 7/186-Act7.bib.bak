@@ -1,0 +1,19 @@
+@Book{soriano,
+author = {Soriano, Maricor N.},
+title = {Image segmentation},
+year = {2019}
+}
+
+@online{barteezy,
+author = {Bartolome, Martin Francis},
+title = {Activity 7 -- {I}mage segmentation},
+year = {2015},
+url = {https://barteezy.wordpress.com/2015/10/05/activity-7-image-segmentationo/}
+}
+
+@online{mouseevents,
+author = {Rosebrock, Adrian},
+title = {Capturing mouse click events with {P}ython and {OpenCV}},
+year = {2015},
+url = {https://www.pyimagesearch.com/2015/03/09/capturing-mouse-click-events-with-python-and-opencv/}
+}
