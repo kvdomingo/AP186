@@ -1,0 +1,10 @@
+@Book{soriano,
+author = {Soriano, Maricor N.},
+title = {Morphological operations},
+year = {2019}
+}
+@online{morpho,
+author = {Fisher, R and Perkins, S and Walker, A and Wolfart, E},
+title = {Morphology},
+url = {http://homepages.inf.ed.ac.uk/rbf/HIPR2/morops.htm}
+}

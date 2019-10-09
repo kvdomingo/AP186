@@ -65,18 +65,18 @@ In order to produce a binary image, I applied a threshold of 192 to Fig. \ref{fi
 	\end{tabular}
 \end{table}
 
-In order to produce an indexed image, I first imported the image into Photoshop and set it to Index mode. I then extracted the 256 most common colors and saved them as a Photoshop Color Table (\texttt{.act}). I then applied this color indexing to the image and saved it as TIFF. The result of the indexing along with its color table is shown in Fig. \ref{fig:tiff-indexed} and Table \ref{tab:indexed}, respectively. Notice that the ground portion of the image still looks decent because the boundaries of each color are considerably well-defined. However, the sky portion exhibits some visible degradation due to the smooth gradients in the original image. 
+In order to produce an indexed image, I first imported the image into Photoshop and set it to Index mode. I then extracted the 256 most common colors and saved them as a Photoshop Color Table (\texttt{.act}). I then applied this color indexing to the image and saved it one as a \texttt{TIFF} and one as a \texttt{GIF}. The result of the \texttt{TIFF} indexing along with its color table is shown in Fig. \ref{fig:tiff-indexed} and Table \ref{tab:indexed}, respectively. Notice that the ground portion of the image still looks decent because the boundaries of each color are considerably well-defined. However, the sky portion exhibits some visible degradation due to the smooth gradients in the original image. The \texttt{GIF} indexing in Fig. \ref{fig:gif-indexed} exhibits degradation even in the ground portion. I found out that this was due to the difference in the way the colors are sampled. In the former, the sampling of colors is locally adaptive, which allows transition of colors to be smoother, while in the latter, the sampling is uniform.
 
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=\textwidth]{DSC_8805_indexed.png}
+	\includegraphics[width=\textwidth]{DSC_8805_tiff_indexed.png}
 	\caption{Fig. \ref{fig:hdr} saved as a \texttt{TIFF} indexed image.}
 	\label{fig:tiff-indexed}
 \end{figure}
 
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=\textwidth]{DSC_8805.png}
+	\includegraphics[width=\textwidth]{DSC_8805_gif_indexed.png}
 	\caption{Fig. \ref{fig:hdr} saved as a \texttt{GIF} indexed image.}
 	\label{fig:gif-indexed}
 \end{figure}
@@ -89,7 +89,7 @@ In order to produce an indexed image, I first imported the image into Photoshop 
 \definecolor{index-1}{rgb}{1,1,1}
 \begin{table}[htb]
 	\centering
-	\caption{First and last few elements of the color table for Fig. \ref{fig:indexed}.}
+	\caption{First and last few elements of the color table for Fig. \ref{fig:tiff-indexed}.}
 	\label{tab:indexed}
 	\begin{tabular}{|c|ccc|c|}
 		\hline
@@ -124,7 +124,7 @@ Some of the libraries that can be used for image processing in Python include th
 	\item \texttt{matplotlib.pyplot.savefig()}: saves a valid \texttt{numpy} array as an image with the specified file format.
 	\item \texttt{PIL.\_getexif()}: extracts the image metadata and stores it as a dictionary.
 	\item \texttt{matplotlib.pyplot.hist()}: plots the histogram of an image.
-	\item \texttt{cv2.COLOR\_RGB2GRAY}: converts an RGB image to grayscale.
+	\item \texttt{cv2.COLOR\_RGB2GRAY}: converts an RGB image to grayscale; can be passed as an argument in \texttt{cv2.imread()}.
 \end{itemize}
 
 
