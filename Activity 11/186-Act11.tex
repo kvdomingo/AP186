@@ -26,7 +26,8 @@ For this activity \cite{soriano}, I paired up with Rene Principe and we decided 
 
 \subsection{Computational phase}
 \subsubsection{Preprocessing}
-The raw video files were first trimmed in Adobe Premiere Pro such that the clip starts at the moment the ball is dropped and ends either when the ball stops bouncing or goes out of the frame. The video was then rotated into portrait mode such that the ground direction is downwards. Finally, it was exported as \texttt{mp4}.
+The raw video files were first trimmed in Adobe Premiere Pro such that the clip starts at the moment the ball is dropped and ends either when the ball stops bouncing or goes out of the frame. The video was then rotated into portrait mode such that the ground direction is downwards. Finally, it was exported as \texttt{mp4}. The original, unsegmented video can be accessed through \\
+\url{https://drive.google.com/open?id=16IaBhmNCL8T7cAKvIIQ6y4vyOT1K08hK}.
 
 \subsubsection{Segmentation and morphological cleaning}
 Using Python, I first read an arbitrary frame such that the entire ball can be seen in the frame. Using my code for a previous activity on non-parametric segmentation, I selected the ROI such that it encompassed a rectangular portion of the ball, taking care not to include the background. After obtaining the ROI and its histogram, non-parametric segmentation can automatically detect the ball for all succeeding frames. Next, I applied Otsu's method to binarize the frames, followed by an elliptical closing operator of size $11 \times 11$. I then used the \texttt{regionprops} function from the \texttt{skimage} library to obtain the segmented ball's properties per frame, in particular the centroid and diameter properties. The result of these operations is shown in Fig. \ref{fig:segment}.
