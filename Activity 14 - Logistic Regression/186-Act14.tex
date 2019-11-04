@@ -1,0 +1,47 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{physics}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{colortbl}
+\usepackage{musicography}
+\newcommand{\activity}{Activity 14 -- Logistic regression}
+\input{spp.dat}
+
+\begin{document}
+
+\title{\TitleFont \activity}
+\author[ ]{\textbf{Kenneth V. Domingo} \\
+2015--03116 \\
+App Physics 186, 1\textsuperscript{st} Semester, A.Y. 2019--20}
+\affil[ ]{\corremail{kvdomingo@up.edu.ph} }
+
+\maketitle
+\thispagestyle{titlestyle}
+
+\section*{Results and Discussion}
+\setcounter{section}{1}
+
+For this activity \cite{soriano}, I used the bananadat dataset from \cite{fruits} which has 273 images of bananas separated by underripe, midripe, yellowish-green, and overripe labels.
+
+\subsection{Feature extraction: RGB}
+For the training set I decided to take only images of underripe (green) and overripe (brownish-yellow) bananas and assign them class numbers 0 and 1, respectively. The feature vector extracted from the images consist only of the mean of each color channel, without any further preprocessing or segmentation. I simply reused my code from the previous activity, with minor modifications
+
+
+\clearpage
+\begin{table}[!htb]
+	\centering
+	\caption{Self-evaluation.}
+	\begin{tabular}{||r|c||}
+		\hline
+		Technical correctness & 5 \\ \hline
+		Quality of presentation & 5 \\ \hline
+		Initiative & 0 \\ \hline
+		\textbf{TOTAL} & \textbf{10} \\ \hline
+	\end{tabular}
+	\label{tab:self-eval}
+\end{table}
+
+\bibliographystyle{spp-bst}
+\bibliography{biblio}
+
+\end{document}
