@@ -109,3 +109,9 @@ venv.bak/
 *.MOV
 *.mp4
 *.avi
+
+# Tensorflow
+*.h5
+*.hdf5
+*.model
+.tb_logs
