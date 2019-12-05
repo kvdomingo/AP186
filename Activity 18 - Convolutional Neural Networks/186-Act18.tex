@@ -64,7 +64,7 @@ Our input image has a dimension of $224 \times 224 \times 3$. The first layer is
 \noindent where $y_i$ is the label, and $p(y_i)$ is the predicted probability of an image of having label $y_i$ for all $N$ images \cite{godoy}. For the optimizer, we use stochastic gradient descent (SGD) with learning rate $\eta = 0.01$, momentum $\mu = 0.9$, and a decay of $5 \times 10^{-4}$. We also use a learning rate scheduler, which reduces the learning rate by a factor of 10 if the validation loss does not improve over 5 epochs. Lastly, we also utilize a checkpointer, which saves a snapshot of the model weights if the validation loss decreases after an epoch. While monitoring the loss and accuracy, we now train the network until the validation loss drops below 0.1 or when the validation loss starts to diverge from the training loss.
 
 \section{Results and Discussion}
-Figure \ref{fig:loss-curves} shows the loss and accuracy curves after training the network. At epoch 13, the validation loss is minimum, and starts to diverge from the training loss afterwards. Training was manually stopped at epoch 29 after observing no further improvement in validation loss. We restored the best weights which were obtained at epoch 13, which had a validation loss and accuracy of $0.33$ and $87.00\%$, respectively. Overall training took around 80 minutes.
+Figure \ref{fig:loss-curves} shows the loss and accuracy curves after training the network. At around epoch 20, the validation loss and accuracy start to level out. Training was manually stopped at epoch 53 after observing no further improvement in validation loss. We restored the best weights which were obtained at epoch 40, which had a validation loss and accuracy of $0.26$ and $90.10\%$, respectively. Overall training took around 45 minutes.
 
 \begin{figure}[htb]
 	\centering
@@ -73,7 +73,7 @@ Figure \ref{fig:loss-curves} shows the loss and accuracy curves after training t
 	\label{fig:loss-curves}
 \end{figure}
 
-\noindent Feeding the test images in the network yields a loss of $0.15$ and an excellent $94.95\%$ accuracy. Sample predictions are shown in Fig. \ref{fig:outputs}. Only one out of the 18 predictions is wrong. Upon observation we can see why the network may have been confused: due to the dark color of the cat.
+\noindent Feeding the test images in the network yields a loss of $0.09$ and an excellent $97.03\%$ accuracy. Sample predictions are shown in Fig. \ref{fig:outputs}. Only one out of the 18 predictions is wrong. Upon observation we can see why the network may have been confused: due to the dark color of the cat.
 
 For increasing the accuracy of the network, one may consider adding another dropout layer after the deep fully-connected layer, playing around with the convolutional layer parameters, and using a deeper network.
 
